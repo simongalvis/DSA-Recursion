@@ -54,7 +54,20 @@ const reverseString = function(string){
      return string;
    }
    //General case
-   return string[string.length -1] + reverseString(string.slice(0, string.length -1))
+   return string[string.length -1] + reverseString(string.slice(0, string.length -1));
 }
 
-console.log(reverseString('Reverse a string'))
+console.log(reverseString('Reverse a string'));
+
+// 4. nth Triangular number
+
+const nthTriangularNum = function(n){
+  //Base case
+  if(n === 1){
+    return 1;
+  }
+  //General Case
+  return  n + nthTriangularNum(n-1);
+}
+
+console.log(nthTriangularNum(4));
