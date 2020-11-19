@@ -25,3 +25,23 @@ const sheepOverFence = function(sheepCount){
 
 const sheepCount = 7;
 console.log(sheepOverFence(sheepCount));
+
+// 2. Power Calculator
+
+const powerCalculator = function(base, exponent){
+
+  if(exponent < 0){
+    return 'exponent should be >= 0';
+  }
+  if(exponent === 0){
+    return 1;
+  }
+  //Base case
+  if(exponent === 1){
+    return base;
+  }
+  //General case
+  return base * powerCalculator(base, exponent-1);
+}
+
+console.log(powerCalculator(10, 2));
