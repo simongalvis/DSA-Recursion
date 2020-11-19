@@ -70,4 +70,17 @@ const nthTriangularNum = function(n){
   return  n + nthTriangularNum(n-1);
 }
 
-console.log(nthTriangularNum(4));
+console.log(nthTriangularNum(5));
+
+// 5. String Splitter
+
+const stringSplitter = function(string, separator){
+  //Base Case
+  if(!string.includes(separator)){
+  return string;
+}
+  //General case
+  return  stringSplitter(string.replace(separator, ','), separator);
+}
+
+console.log(stringSplitter('11/18/2020', '/'))
