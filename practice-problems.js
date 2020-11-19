@@ -45,3 +45,16 @@ const powerCalculator = function(base, exponent){
 }
 
 console.log(powerCalculator(10, 2));
+
+// 3. Reverse String
+
+const reverseString = function(string){
+   //Base case
+   if(string.length === 1){
+     return string;
+   }
+   //General case
+   return string[string.length -1] + reverseString(string.slice(0, string.length -1))
+}
+
+console.log(reverseString('Reverse a string'))
