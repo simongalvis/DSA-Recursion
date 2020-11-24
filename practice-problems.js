@@ -123,3 +123,19 @@ const factorial = (n) =>{
 // 11. Organization chart
 
 // 12. Binary representation
+const binary = (n) =>{
+  //base case
+  if (n == 0){
+    return 0;
+  }
+  //General case
+if(n<2){
+  return 1
+}
+if(n%2 == 0){
+  return 0 + '.' + binary(n/2)
+}
+return 1 +'.' + binary((n -1) /2) 
+}
+
+console.log(binary(777))
