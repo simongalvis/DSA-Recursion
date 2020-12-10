@@ -130,12 +130,12 @@ const binary = (n) =>{
   }
   //General case
 if(n<2){
-  return 1
+  return '1'
 }
 if(n%2 == 0){
-  return 0 + '.' + binary(n/2)
+  return '0' + '.' + binary(n/2)
 }
-return 1 +'.' + binary((n -1) /2) 
+return '1'  + '.' + binary((n -1) /2) 
 }
 
-console.log(binary(777))
+console.log(binary(785).split('.').reverse().join(''))
